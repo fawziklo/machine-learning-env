@@ -14,15 +14,18 @@ install:
 	pip install -r requirements.txt
 
 format:
+	python -m black --version
 	black src tests
 
 clean:
 	rmdir /s /q venv
 
 lint:
+	python -m pylint --versio
 	pylint	--disable=R,C	src tests
 
 test:
+	python -m pytest --version
 	python -m pytest -v tests --cov=src
 
 all:	install format lint test
