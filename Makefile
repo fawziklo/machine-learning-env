@@ -21,7 +21,7 @@ clean:
 	rmdir /s /q venv
 
 lint:
-	python -m pylint --versio
+	python -m pylint --version
 	pylint	--disable=R,C	src tests
 
 test:
